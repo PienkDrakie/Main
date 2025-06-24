@@ -6,7 +6,7 @@
 
 ### About Me
 
-I'm a university student with a knack for both code and creativity. Proficient in **Java** and **C** (with a dash of assembly), I’ve wrangled everything from tile maze games and image scalers to custom language parsers and multi-threaded bots. I have a penchant for turning group chaos into productivity—organizing seven people for regular TTRPG sessions is a feat more complex than any group project sprint!
+I'm a university student with a knack for both code and creativity. Proficient in **Java** and **C** (also dabbled in a variety of other languages), I’ve wrangled everything from tile maze games and image scalers to custom language parsers and multi-threaded bots. I have a penchant for turning group chaos into productivity—organizing seven people for regular TTRPG sessions is a feat more complex than any group project sprint!
 
 ---
 
