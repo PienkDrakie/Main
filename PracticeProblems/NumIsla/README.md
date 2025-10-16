@@ -29,6 +29,7 @@ Island 3: The two connected '1's in the bottom-right
 For this solution, I will first parse the input grid as a text file,
 with each cell separated by 1 space and each row on a different line, before
 calling the function.
+
 **No AI is used, as this is for growth-learning. AI can make subtle mistakes and I
 do not have the experience yet to confidently find them all. I cannot always
 rely on AI as a crutch.**
