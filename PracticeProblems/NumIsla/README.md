@@ -14,17 +14,17 @@ water ('0's).
 The entire grid is surrounded by water on all four edges (you can assume there's
 water beyond the grid boundaries).
 
-For example, if you have a grid like:
+For example, if you have a grid like:  
+1 1 0 0 0  
+1 1 0 0 0  
+0 0 1 0 0  
+0 0 0 1 1  
+This grid contains 3 islands.
 
-1 1 0 0 0
-1 1 0 0 0
-0 0 1 0 0
-0 0 0 1 1
-This grid contains 3 islands:
+- Island 1: The connected '1's in the top-left corner (2x2 block)
+- Island 2: The single '1' in the middle
+- Island 3: The two connected '1's in the bottom-right
 
-Island 1: The connected '1's in the top-left corner (2x2 block)
-Island 2: The single '1' in the middle
-Island 3: The two connected '1's in the bottom-right
 ---
 For this solution, I will first parse the input grid as a text file,
 with each cell separated by 1 space and each row on a different line, before
