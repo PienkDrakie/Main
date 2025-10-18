@@ -30,6 +30,13 @@ I'm a university student with a knack for both code and creativity. Proficient i
   - Sprint-driven development  
   - Merge conflict resolution wizardry
 
+- **Workspaces and Software Experience**:
+  - Vim on WSL
+  - Visual Studio Code
+  - GitHub & Gitlab
+  - SQL Server Management Studio
+  - Power BI
+
 ---
 
 ### Digital Art & Design
