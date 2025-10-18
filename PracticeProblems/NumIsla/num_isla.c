@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int num_isla();
+int num_isla(int **grid, int m, int n);
+void dfs(int **grid, int m, int n, int i, int j);
 
 int main(int argc, char *argv[])
 {
@@ -13,6 +14,9 @@ int main(int argc, char *argv[])
 	int first_line, nmpty;
 	char c;
 	FILE *fptr;
+	int num;
+	i = 0;
+	j = 0;
 	m = 0;
 	n = 0;
 	first_line = 1;
@@ -27,8 +31,6 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "ERROR: Unable to open file: \"%s\"\n", argv[1]);
 		return EXIT_FAILURE;
 	}
-	i = 0;
-	j = 0;
 	/* get m x n dimensions (only need to count columns once) */
 	while ((c = getc(fptr)) != EOF) {
 		if (c == '1' || c == '0') {
@@ -62,7 +64,6 @@ int main(int argc, char *argv[])
 		grid[i] = nums + (i * n);
 	}
 
-	printf("m: %d n: %d\n", m, n);
 	/* read in grid */
 	for (i = 0; i < m; i++) {
 		for (j = 0; j < n; j++) {
@@ -73,10 +74,11 @@ int main(int argc, char *argv[])
 				fclose(fptr);
 				return EXIT_FAILURE;
 			}
-			printf("%d ", grid[i][j]);
 		}
-		printf("\n");
 	}
+
+	num = num_isla(grid, m, n);
+	printf("Num of islands: %d\n", num);
 
 	/* cleanup */
 	free(nums);
@@ -85,7 +87,7 @@ int main(int argc, char *argv[])
 	return EXIT_SUCCESS;
 }
 
-int num_isla()
+int num_isla(int **grid, int m, int n)
 {
 	/* Algorithm:
 	* - loop through grid
@@ -93,8 +95,37 @@ int num_isla()
 	* - use DFS to remove island, '1'->'0'
 	* - continue
 	*/
+	int i, j, num;
+	num = 0;
 
-	int n = 0;
+	for (i = 0; i < m; i++) {
+		for (j = 0; j < n; j++) {
+			if (grid[i][j] == 1) {
+				num++;
+				dfs(grid, m, n, i, j);
+			}
+		}
+	}
 
-	return n;
+	return num;
 }
+
+void dfs(int **grid, int m, int n, int i, int j)
+{
+	/* Makes i,j = 0, and recursively removes connected
+	 * 1s in the surrounding area.
+	*/
+	int a, x, y;
+	int dirs[4][2] = { {-1,0},{0,1},{1,0},{0,-1} };
+	
+	grid[i][j] = 0;
+
+	for (a = 0; a < 4; a++) {
+		x = i+dirs[a][0];
+		y = j+dirs[a][1];
+		if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == 1) {
+			dfs(grid, m, n, x, y);
+		}
+	}
+}
+
