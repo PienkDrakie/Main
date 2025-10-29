@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.BorderPane?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21.0.8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21.0.8" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@DarkTheme.css" styleClass="background">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -28,4 +28,7 @@
         </menus>
       </MenuBar>
    </top>
+    <center>
+        <fx:include source="PersonOverview.fxml"/>
+    </center>
 </BorderPane>
