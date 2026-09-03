@@ -6,7 +6,7 @@
 
 ### About Me
 
-I'm a junior developer with a knack for both code and creativity. Proficient in **C#**, **Java** and **C** (also dabbled in a variety of other languages). I’ve worked on a range of projects, from tile maze games and image scalers to custom language parsers and multi-threaded bots. I have a need for turning unorganized chaos into structured productivity (organizing seven people for regular TTRPG sessions should count as complex logistical experience). I graduated with a BSc in Computer Science and Operations Research in 2025.
+I'm a junior developer with an interest for both code and creativity. Proficient in **C#**, **Java** and **C** (also dabbled in a variety of other languages). I’ve worked on a range of projects, from tile maze games and image scalers to custom language parsers and multi-threaded bots. I have a need for turning unorganized chaos into structured productivity (organizing seven people for regular TTRPG sessions should count as complex logistical experience). I graduated with a BSc in Computer Science and Operations Research in 2025, and am currently working full-time as a Junior Developer.
 
 ---
 
